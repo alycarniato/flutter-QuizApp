@@ -8,15 +8,15 @@ class MyFirstApp extends StatefulWidget {
 }
 
 class _MyFirstAppState extends State<MyFirstApp> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
   var questions = [
     'What\'s your favorite color?',
     'What\'s your favorite animal?'
   ];
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
-      questionIndex += 1;
+      _questionIndex += 1;
     });
 
     print('answer');
@@ -32,17 +32,17 @@ class _MyFirstAppState extends State<MyFirstApp> {
         body: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Text(questions[questionIndex]),
+            Text(questions[_questionIndex]),
             ElevatedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('answer 1'),
             ),
             ElevatedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('answer 2'),
             ),
             ElevatedButton(
-              onPressed: answerQuestion,
+              onPressed: _answerQuestion,
               child: Text('answer 3'),
             ),
           ],
