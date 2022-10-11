@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './question.dart';
+
 void main() => runApp(MyFirstApp());
 
 class MyFirstApp extends StatefulWidget {
@@ -32,7 +34,7 @@ class _MyFirstAppState extends State<MyFirstApp> {
         body: Column(
           // ignore: prefer_const_literals_to_create_immutables
           children: [
-            Text(questions[_questionIndex]),
+            Question(questions[_questionIndex]),
             ElevatedButton(
               onPressed: _answerQuestion,
               child: Text('answer 1'),
