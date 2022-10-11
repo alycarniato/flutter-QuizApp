@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './question.dart';
+import './answer.dart';
 
 void main() => runApp(MyFirstApp());
 
@@ -35,18 +36,9 @@ class _MyFirstAppState extends State<MyFirstApp> {
           // ignore: prefer_const_literals_to_create_immutables
           children: [
             Question(questions[_questionIndex]),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: Text('answer 1'),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: Text('answer 2'),
-            ),
-            ElevatedButton(
-              onPressed: _answerQuestion,
-              child: Text('answer 3'),
-            ),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
+            Answer(_answerQuestion),
           ],
         ),
       ),
